@@ -8,11 +8,19 @@ namespace Курсовая_работа___1
 {
     internal class Menu
     {
-        private List<Menu_position> menu;
-        public  Menu() {
-           
-            this.menu = new List<Menu_position>();
-        }
+        private List<Menu_position> menu = new List<Menu_position>();
         
+        public void AddPosition(Menu_position position)
+        {
+            menu.Add(position);
+        }
+
+        public void PrintMenu()
+        {
+            foreach(Menu_position mp in menu)
+            {
+                Console.WriteLine(mp);
+            }
+        }
     }
 }
