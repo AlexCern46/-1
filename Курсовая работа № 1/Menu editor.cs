@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Курсовая_работа___1
 {
-    public partial class Form1 : Form
+    public partial class Menu_editor : Form
     {
-        public Form1()
+        public Menu_editor()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
