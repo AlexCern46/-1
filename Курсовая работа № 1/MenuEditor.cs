@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Курсовая_работа___1
 {
-    public partial class Menu_editor : Form
+    public partial class MenuEditor : Form
     {
-        public Menu_editor()
+        public MenuEditor()
         {
             InitializeComponent();
         }

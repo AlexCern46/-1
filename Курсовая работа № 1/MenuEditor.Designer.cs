@@ -1,6 +1,6 @@
 ﻿namespace Курсовая_работа___1
 {
-    partial class Menu_editor
+    partial class MenuEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Menu_editor";
+            this.Text = "MenuEditor";
         }
 
         #endregion

@@ -46,13 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu editor.cs">
+    <Compile Include="Class1.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu editor.Designer.cs">
-      <DependentUpon>Menu editor.cs</DependentUpon>
+    <Compile Include="MenuEditor.Designer.cs">
+      <DependentUpon>MenuEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs" />
     <Compile Include="Menu_position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

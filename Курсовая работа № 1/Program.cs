@@ -16,7 +16,7 @@ namespace Курсовая_работа___1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_editor());
+            Application.Run(new MenuEditor());
         }
     }
 }

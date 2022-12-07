@@ -11,9 +11,9 @@ namespace Курсовая_работа___1
         private string name;
         private string composition;
         private int calories;
-        private int prise;
+        private double prise;
 
-        public void SetAll(string name, string composition, int calories, int prise)
+        public Menu_position(string name, string composition, int calories, double prise)
         {
             this.name = name;
             this.composition = composition;
@@ -36,7 +36,7 @@ namespace Курсовая_работа___1
             get { return calories; }
         }
 
-        public int Prise
+        public double Prise
         {
             get { return prise; }
         }
