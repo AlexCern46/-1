@@ -12,9 +12,10 @@ namespace Курсовая_работа___1
         {
             string name = Console.ReadLine();
             string composition = Console.ReadLine();
+            int mass = Convert.ToInt32(Console.ReadLine());
             int calories = Convert.ToInt32(Console.ReadLine());
             double prise = Convert.ToDouble(Console.ReadLine());
-            Menu_position position = new Menu_position(name, composition, calories, prise);
+            Menu_position position = new Menu_position(name, composition, mass, calories, prise);
             Menu.AddPosition(position);
         }
     }

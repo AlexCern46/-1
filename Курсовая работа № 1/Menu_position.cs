@@ -10,13 +10,15 @@ namespace Курсовая_работа___1
     {
         private string name;
         private string composition;
+        private int mass;
         private int calories;
         private double prise;
 
-        public Menu_position(string name, string composition, int calories, double prise)
+        public Menu_position(string name, string composition, int mass, int calories, double prise)
         {
             this.name = name;
             this.composition = composition;
+            this.mass = mass;
             this.calories = calories;
             this.prise = prise;
         }
@@ -29,6 +31,11 @@ namespace Курсовая_работа___1
         public string Composition
         {
             get { return composition; }
+        }
+
+        public int Mass
+        {
+            get { return mass; }
         }
 
         public int Calories
