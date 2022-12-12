@@ -43,8 +43,8 @@
             this.pName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.menu = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.menu = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,6 +107,7 @@
             this.pAddButton.TabIndex = 0;
             this.pAddButton.Text = "Добавить";
             this.pAddButton.UseVisualStyleBackColor = false;
+            this.pAddButton.Click += new System.EventHandler(this.pAddButton_Click);
             // 
             // pPrise
             // 
@@ -226,14 +227,6 @@
             this.tabPage4.Text = "Новый заказ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // menu
-            // 
-            this.menu.FormattingEnabled = true;
-            this.menu.Location = new System.Drawing.Point(0, 26);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(205, 407);
-            this.menu.TabIndex = 0;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -243,6 +236,14 @@
             this.label6.Size = new System.Drawing.Size(65, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Меню";
+            // 
+            // menu
+            // 
+            this.menu.FormattingEnabled = true;
+            this.menu.Location = new System.Drawing.Point(0, 26);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(205, 407);
+            this.menu.TabIndex = 0;
             // 
             // MenuEditor
             // 

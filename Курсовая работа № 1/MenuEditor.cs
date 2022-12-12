@@ -26,5 +26,16 @@ namespace Курсовая_работа___1
         {
 
         }
+
+        private void pAddButton_Click(object sender, EventArgs e)
+        {
+            string name = pName.Text;
+            string composition = pComposition.Text;
+            int mass = Convert.ToInt32(pMass.Text);
+            int calories = Convert.ToInt32(pCalories.Text);
+            double prise = Convert.ToDouble(pPrise.Text);
+            Menu_position position = new Menu_position(name, composition, mass, calories, prise);
+            Menu.AddPosition(position);
+        }
     }
 }
