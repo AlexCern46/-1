@@ -10,7 +10,7 @@ namespace Курсовая_работа___1
     {
         public void GetPosition()
         {
-            string name = .pName.Text;
+            string name = Console.ReadLine();
             string composition = Console.ReadLine();
             int mass = Convert.ToInt32(Console.ReadLine());
             int calories = Convert.ToInt32(Console.ReadLine());
