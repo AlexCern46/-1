@@ -44,7 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.menu = new System.Windows.Forms.ListBox();
+            this.menuBox = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -219,7 +219,7 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.menu);
+            this.tabPage4.Controls.Add(this.menuBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(776, 434);
@@ -237,13 +237,13 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Меню";
             // 
-            // menu
+            // menuBox
             // 
-            this.menu.FormattingEnabled = true;
-            this.menu.Location = new System.Drawing.Point(0, 26);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(205, 407);
-            this.menu.TabIndex = 0;
+            this.menuBox.FormattingEnabled = true;
+            this.menuBox.Location = new System.Drawing.Point(0, 26);
+            this.menuBox.Name = "menuBox";
+            this.menuBox.Size = new System.Drawing.Size(205, 407);
+            this.menuBox.TabIndex = 0;
             // 
             // MenuEditor
             // 
@@ -281,7 +281,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button pAddButton;
-        private System.Windows.Forms.ListBox menu;
+        private System.Windows.Forms.ListBox menuBox;
         private System.Windows.Forms.Label label6;
     }
 }

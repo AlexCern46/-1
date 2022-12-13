@@ -25,6 +25,7 @@ namespace Курсовая_работа___1
             int calories = Convert.ToInt32(pCalories.Text);
             double prise = Convert.ToDouble(pPrise.Text);
             Menu_position position = new Menu_position(name, composition, mass, calories, prise);
+            menuBox.Items.Add(position);
         }
     }
 }
