@@ -15,8 +15,9 @@ namespace Курсовая_работа___1
         public MenuEditor()
         {
             InitializeComponent();
+            List<Menu_position> menu = new List<Menu_position>();
         }
-
+        
         private void pAddButton_Click(object sender, EventArgs e)
         {
             string name = pName.Text;
