@@ -15,7 +15,7 @@ namespace Курсовая_работа___1
         public MenuEditor()
         {
             InitializeComponent();
-            menuBox.DisplayMember = "Output";
+            menuBox.DisplayMember = "Name";
             orderBox.DisplayMember = "Name";
         }
         
@@ -37,7 +37,7 @@ namespace Курсовая_работа___1
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            orderBox.Items.Add(menuBox.SelectedItem.ToString());
+            orderBox.Items.Add(menuBox.SelectedItem);
         }
 
         private void deleteFromOrderButton_Click(object sender, EventArgs e)
