@@ -14,13 +14,5 @@ namespace Курсовая_работа___1
         {
             Menu.menu.Add(position);
         }
-
-        public void PrintMenu()
-        {
-            foreach(Menu_position mp in menu)
-            {
-                Console.WriteLine(mp);
-            }
-        }
     }
 }

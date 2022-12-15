@@ -15,7 +15,6 @@ namespace Курсовая_работа___1
         public MenuEditor()
         {
             InitializeComponent();
-            List<Menu_position> menu = new List<Menu_position>();
         }
         
         private void pAddButton_Click(object sender, EventArgs e)
@@ -27,6 +26,11 @@ namespace Курсовая_работа___1
             double prise = Convert.ToDouble(pPrise.Text);
             Menu_position position = new Menu_position(name, composition, mass, calories, prise);
             menuBox.Items.Add(position);
+            pName.Text = null;
+            pComposition.Text = null;
+            pMass.Text = null;
+            pCalories.Text = null;
+            pPrise.Text = null;
         }
     }
 }
