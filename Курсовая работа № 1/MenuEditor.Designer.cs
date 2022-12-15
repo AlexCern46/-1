@@ -43,8 +43,21 @@
             this.pName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.deleteFromOrderButton = new System.Windows.Forms.Button();
+            this.addToOrderButton = new System.Windows.Forms.Button();
+            this.orderBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.menuBox = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -114,9 +127,9 @@
             this.pPrise.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210)))));
             this.pPrise.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pPrise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(2)))), ((int)(((byte)(37)))));
-            this.pPrise.Location = new System.Drawing.Point(247, 323);
+            this.pPrise.Location = new System.Drawing.Point(317, 323);
             this.pPrise.Name = "pPrise";
-            this.pPrise.Size = new System.Drawing.Size(521, 32);
+            this.pPrise.Size = new System.Drawing.Size(451, 32);
             this.pPrise.TabIndex = 9;
             // 
             // label5
@@ -135,9 +148,9 @@
             this.pCalories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210)))));
             this.pCalories.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pCalories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(2)))), ((int)(((byte)(37)))));
-            this.pCalories.Location = new System.Drawing.Point(247, 264);
+            this.pCalories.Location = new System.Drawing.Point(317, 264);
             this.pCalories.Name = "pCalories";
-            this.pCalories.Size = new System.Drawing.Size(521, 32);
+            this.pCalories.Size = new System.Drawing.Size(451, 32);
             this.pCalories.TabIndex = 7;
             // 
             // label4
@@ -147,18 +160,18 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(100)))));
             this.label4.Location = new System.Drawing.Point(8, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 31);
+            this.label4.Size = new System.Drawing.Size(303, 31);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Каллораж блюда:";
+            this.label4.Text = "Каллорийность блюда:";
             // 
             // pMass
             // 
             this.pMass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210)))));
             this.pMass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pMass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(2)))), ((int)(((byte)(37)))));
-            this.pMass.Location = new System.Drawing.Point(247, 207);
+            this.pMass.Location = new System.Drawing.Point(317, 207);
             this.pMass.Name = "pMass";
-            this.pMass.Size = new System.Drawing.Size(521, 32);
+            this.pMass.Size = new System.Drawing.Size(451, 32);
             this.pMass.TabIndex = 5;
             // 
             // label3
@@ -177,11 +190,11 @@
             this.pComposition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210)))));
             this.pComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pComposition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(2)))), ((int)(((byte)(37)))));
-            this.pComposition.Location = new System.Drawing.Point(247, 73);
+            this.pComposition.Location = new System.Drawing.Point(317, 73);
             this.pComposition.Multiline = true;
             this.pComposition.Name = "pComposition";
             this.pComposition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.pComposition.Size = new System.Drawing.Size(521, 107);
+            this.pComposition.Size = new System.Drawing.Size(451, 107);
             this.pComposition.TabIndex = 3;
             // 
             // label2
@@ -200,9 +213,9 @@
             this.pName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(163)))), ((int)(((byte)(210)))));
             this.pName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(2)))), ((int)(((byte)(37)))));
-            this.pName.Location = new System.Drawing.Point(247, 13);
+            this.pName.Location = new System.Drawing.Point(317, 13);
             this.pName.Name = "pName";
-            this.pName.Size = new System.Drawing.Size(521, 32);
+            this.pName.Size = new System.Drawing.Size(451, 32);
             this.pName.TabIndex = 1;
             // 
             // label1
@@ -218,6 +231,19 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox5);
+            this.tabPage4.Controls.Add(this.label11);
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.label9);
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.label7);
+            this.tabPage4.Controls.Add(this.deleteFromOrderButton);
+            this.tabPage4.Controls.Add(this.addToOrderButton);
+            this.tabPage4.Controls.Add(this.orderBox);
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.menuBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -227,11 +253,40 @@
             this.tabPage4.Text = "Новый заказ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // deleteFromOrderButton
+            // 
+            this.deleteFromOrderButton.Location = new System.Drawing.Point(563, 394);
+            this.deleteFromOrderButton.Name = "deleteFromOrderButton";
+            this.deleteFromOrderButton.Size = new System.Drawing.Size(97, 37);
+            this.deleteFromOrderButton.TabIndex = 4;
+            this.deleteFromOrderButton.Text = "Удалить из заказа";
+            this.deleteFromOrderButton.UseVisualStyleBackColor = true;
+            this.deleteFromOrderButton.Click += new System.EventHandler(this.deleteFromOrderButton_Click);
+            // 
+            // addToOrderButton
+            // 
+            this.addToOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addToOrderButton.Location = new System.Drawing.Point(315, 394);
+            this.addToOrderButton.Name = "addToOrderButton";
+            this.addToOrderButton.Size = new System.Drawing.Size(129, 33);
+            this.addToOrderButton.TabIndex = 3;
+            this.addToOrderButton.Text = "Добавть в заказ";
+            this.addToOrderButton.UseVisualStyleBackColor = true;
+            this.addToOrderButton.Click += new System.EventHandler(this.addToOrderButton_Click);
+            // 
+            // orderBox
+            // 
+            this.orderBox.FormattingEnabled = true;
+            this.orderBox.Location = new System.Drawing.Point(563, 26);
+            this.orderBox.Name = "orderBox";
+            this.orderBox.Size = new System.Drawing.Size(212, 368);
+            this.orderBox.TabIndex = 2;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(69, 0);
+            this.label6.Location = new System.Drawing.Point(56, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 25);
             this.label6.TabIndex = 1;
@@ -239,11 +294,104 @@
             // 
             // menuBox
             // 
+            this.menuBox.BackColor = System.Drawing.SystemColors.Info;
             this.menuBox.FormattingEnabled = true;
             this.menuBox.Location = new System.Drawing.Point(0, 26);
             this.menuBox.Name = "menuBox";
-            this.menuBox.Size = new System.Drawing.Size(205, 407);
+            this.menuBox.Size = new System.Drawing.Size(180, 407);
             this.menuBox.TabIndex = 0;
+            this.menuBox.SelectedIndexChanged += new System.EventHandler(this.menuBox_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(354, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(203, 30);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(186, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 25);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Название:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(354, 71);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(203, 78);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(186, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 25);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Описание:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(354, 160);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(203, 30);
+            this.textBox3.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(186, 163);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Масса:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(354, 201);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(203, 30);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(186, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Цена:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Location = new System.Drawing.Point(354, 244);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(203, 30);
+            this.textBox5.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(186, 206);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(162, 25);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Каллорийность:";
             // 
             // MenuEditor
             // 
@@ -283,5 +431,18 @@
         private System.Windows.Forms.Button pAddButton;
         private System.Windows.Forms.ListBox menuBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button addToOrderButton;
+        private System.Windows.Forms.ListBox orderBox;
+        private System.Windows.Forms.Button deleteFromOrderButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
     }
 }

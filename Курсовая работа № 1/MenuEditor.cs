@@ -15,6 +15,8 @@ namespace Курсовая_работа___1
         public MenuEditor()
         {
             InitializeComponent();
+            menuBox.DisplayMember = "Output";
+            orderBox.DisplayMember = "Name";
         }
         
         private void pAddButton_Click(object sender, EventArgs e)
@@ -31,6 +33,26 @@ namespace Курсовая_работа___1
             pMass.Text = null;
             pCalories.Text = null;
             pPrise.Text = null;
+        }
+
+        private void addToOrderButton_Click(object sender, EventArgs e)
+        {
+            orderBox.Items.Add(menuBox.SelectedItem.ToString());
+        }
+
+        private void deleteFromOrderButton_Click(object sender, EventArgs e)
+        {
+            if(orderBox.SelectedIndex != -1) orderBox.Items.RemoveAt(orderBox.SelectedIndex);
+        }
+
+        private void menuBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Menu_position position = (Menu_position)menuBox.SelectedItem;
+            textBox1.Text = position.Name;
+            textBox2.Text = position.Composition;
+            textBox3.Text = position.Mass.ToString();
+            textBox4.Text = position.Calories.ToString();
+            textBox5.Text = position.Prise.ToString();
         }
     }
 }
