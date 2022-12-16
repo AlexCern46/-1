@@ -6,26 +6,17 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа___1
 {
-    internal class Menu_position
+    internal class Menu_position : Position
     {
-        private string name;
         private string composition;
         private int mass;
         private int calories;
-        private double prise;
 
-        public Menu_position(string name, string composition, int mass, int calories, double prise)
+        public Menu_position(string name, string composition, int mass, int calories, double prise) : base(name, prise)
         {
-            this.name = name;
             this.composition = composition;
             this.mass = mass;
             this.calories = calories;
-            this.prise = prise;
-        }
-
-        public string Name
-        {
-            get { return name; }
         }
 
         public string Composition
@@ -41,11 +32,6 @@ namespace Курсовая_работа___1
         public int Calories
         {
             get { return calories; }
-        }
-
-        public double Prise
-        {
-            get { return prise; }
         }
     }
 }

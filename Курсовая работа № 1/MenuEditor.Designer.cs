@@ -43,6 +43,7 @@
             this.pName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.MakingAnOrderButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -60,7 +61,8 @@
             this.orderBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.menuBox = new System.Windows.Forms.ListBox();
-            this.MakingAnOrderButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -234,6 +236,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.MakingAnOrderButton);
             this.tabPage4.Controls.Add(this.label13);
             this.tabPage4.Controls.Add(this.label12);
@@ -258,6 +262,16 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Новый заказ";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // MakingAnOrderButton
+            // 
+            this.MakingAnOrderButton.Location = new System.Drawing.Point(666, 378);
+            this.MakingAnOrderButton.Name = "MakingAnOrderButton";
+            this.MakingAnOrderButton.Size = new System.Drawing.Size(107, 53);
+            this.MakingAnOrderButton.TabIndex = 17;
+            this.MakingAnOrderButton.Text = "Перейти к оформлению заказа";
+            this.MakingAnOrderButton.UseVisualStyleBackColor = true;
+            this.MakingAnOrderButton.Click += new System.EventHandler(this.MakingAnOrderButton_Click);
             // 
             // label13
             // 
@@ -383,9 +397,10 @@
             // addToOrderButton
             // 
             this.addToOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addToOrderButton.Location = new System.Drawing.Point(315, 394);
+            this.addToOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addToOrderButton.Location = new System.Drawing.Point(298, 378);
             this.addToOrderButton.Name = "addToOrderButton";
-            this.addToOrderButton.Size = new System.Drawing.Size(129, 33);
+            this.addToOrderButton.Size = new System.Drawing.Size(164, 49);
             this.addToOrderButton.TabIndex = 3;
             this.addToOrderButton.Text = "Добавть в заказ";
             this.addToOrderButton.UseVisualStyleBackColor = true;
@@ -423,15 +438,23 @@
             this.menuBox.TabIndex = 0;
             this.menuBox.SelectedIndexChanged += new System.EventHandler(this.menuBox_SelectedIndexChanged);
             // 
-            // MakingAnOrderButton
+            // label14
             // 
-            this.MakingAnOrderButton.Location = new System.Drawing.Point(666, 378);
-            this.MakingAnOrderButton.Name = "MakingAnOrderButton";
-            this.MakingAnOrderButton.Size = new System.Drawing.Size(107, 53);
-            this.MakingAnOrderButton.TabIndex = 17;
-            this.MakingAnOrderButton.Text = "Перейти к оформлению заказа";
-            this.MakingAnOrderButton.UseVisualStyleBackColor = true;
-            this.MakingAnOrderButton.Click += new System.EventHandler(this.MakingAnOrderButton_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(186, 331);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(167, 25);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Укажите кол-во:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(354, 331);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(85, 30);
+            this.textBox6.TabIndex = 19;
             // 
             // MenuEditor
             // 
@@ -487,5 +510,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button MakingAnOrderButton;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label14;
     }
 }
