@@ -54,5 +54,11 @@ namespace Курсовая_работа___1
             textBox4.Text = position.Calories.ToString();
             textBox5.Text = position.Prise.ToString();
         }
+
+        private void MakingAnOrderButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm= new OrderForm(this);
+            orderForm.Show();
+        }
     }
 }
