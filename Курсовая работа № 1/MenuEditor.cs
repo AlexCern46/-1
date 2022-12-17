@@ -21,18 +21,42 @@ namespace Курсовая_работа___1
         
         private void pAddButton_Click(object sender, EventArgs e)
         {
-            string name = pName.Text;
-            string composition = pComposition.Text;
-            int mass = Convert.ToInt32(pMass.Text);
-            int calories = Convert.ToInt32(pCalories.Text);
-            double prise = Convert.ToDouble(pPrise.Text);
-            Menu_position position = new Menu_position(name, composition, mass, calories, prise);
-            menuBox.Items.Add(position);
-            pName.Text = null;
-            pComposition.Text = null;
-            pMass.Text = null;
-            pCalories.Text = null;
-            pPrise.Text = null;
+            try
+            {
+                int k = 0;
+                string name = pName.Text;
+                string composition = pComposition.Text;
+                double mass = Convert.ToInt32(pMass.Text);
+                double calories = Convert.ToInt32(pCalories.Text);
+                double prise = Convert.ToDouble(pPrise.Text);
+                if (String.IsNullOrEmpty(pName.Text) || pName.Text.Trim() == string.Empty)
+                {
+                    errorProvider1.SetError(pName, "Не указано названте блюда!");
+                    pName.Text = null;
+                    k++;
+                }
+                if (String.IsNullOrEmpty(pComposition.Text) || pComposition.Text.Trim() == string.Empty)
+                {
+                    errorProvider1.SetError(pComposition, "Не указано описание блюда!");
+                    pComposition.Text = null;
+                    k++;
+                }
+                if (k == 0)
+                {
+                    errorProvider1.Clear();
+                    Menu_position position = new Menu_position(name, composition, mass, calories, prise);
+                    menuBox.Items.Add(position);
+                    pName.Text = null;
+                    pComposition.Text = null;
+                    pMass.Text = null;
+                    pCalories.Text = null;
+                    pPrise.Text = null;
+                }
+            }
+            catch
+            {
+                errorProvider1.SetError(pMass, "Не коректный ввод данных!");
+            }
         }
 
         private void addToOrderButton_Click(object sender, EventArgs e)
@@ -42,7 +66,7 @@ namespace Курсовая_работа___1
 
         private void deleteFromOrderButton_Click(object sender, EventArgs e)
         {
-            if(orderBox.SelectedIndex != -1) orderBox.Items.RemoveAt(orderBox.SelectedIndex);
+            if (orderBox.SelectedIndex != -1) orderBox.Items.RemoveAt(orderBox.SelectedIndex);
         }
 
         private void menuBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,8 +81,15 @@ namespace Курсовая_работа___1
 
         private void MakingAnOrderButton_Click(object sender, EventArgs e)
         {
-            OrderForm orderForm= new OrderForm(this);
-            orderForm.Show();
+            if (orderBox.Items.Count != 0) 
+            {
+                OrderForm orderForm = new OrderForm(this);
+                orderForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Заказ пуст");
+            }
         }
     }
 }

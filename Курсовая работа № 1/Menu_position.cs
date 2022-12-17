@@ -9,10 +9,10 @@ namespace Курсовая_работа___1
     internal class Menu_position : Position
     {
         private string composition;
-        private int mass;
-        private int calories;
+        private double mass;
+        private double calories;
 
-        public Menu_position(string name, string composition, int mass, int calories, double prise) : base(name, prise)
+        public Menu_position(string name, string composition, double mass, double calories, double prise) : base(name, prise)
         {
             this.composition = composition;
             this.mass = mass;
@@ -24,12 +24,12 @@ namespace Курсовая_работа___1
             get { return composition; }
         }
 
-        public int Mass
+        public double Mass
         {
             get { return mass; }
         }
 
-        public int Calories
+        public double Calories
         {
             get { return calories; }
         }
