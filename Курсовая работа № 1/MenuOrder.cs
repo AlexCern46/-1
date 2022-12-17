@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа___1
 {
-    internal class Menu
+    internal class MenuOrder
     {
-        public static List<Menu_position> menu = new List<Menu_position>();
+        private static List<Menu_position> menu = new List<Menu_position>();
         
         public static void AddPosition(Menu_position position)
         {
-            Menu.menu.Add(position);
+            menu.Add(position);
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Курсовая_работа___1
     internal abstract class Position
     {
         private string name;
-        private double prise;
+        private string prise;
 
-        public Position(string name, double prise)
+        public Position(string name, string prise)
         {
             this.name = name;
             this.prise = prise;
@@ -22,7 +22,7 @@ namespace Курсовая_работа___1
             get { return name; }
         }
 
-        public double Prise
+        public string Prise
         {
             get { return prise; }
         }

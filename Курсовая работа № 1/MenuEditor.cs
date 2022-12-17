@@ -21,41 +21,48 @@ namespace Курсовая_работа___1
         
         private void pAddButton_Click(object sender, EventArgs e)
         {
-            try
+            int k = 0;
+            string name = pName.Text;
+            string composition = pComposition.Text;
+            string mass = pMass.Text;
+            string calories = pCalories.Text;
+            string prise = pPrise.Text;
+            if (String.IsNullOrEmpty(pName.Text) || pName.Text.Trim() == string.Empty)
             {
-                int k = 0;
-                string name = pName.Text;
-                string composition = pComposition.Text;
-                double mass = Convert.ToInt32(pMass.Text);
-                double calories = Convert.ToInt32(pCalories.Text);
-                double prise = Convert.ToDouble(pPrise.Text);
-                if (String.IsNullOrEmpty(pName.Text) || pName.Text.Trim() == string.Empty)
-                {
-                    errorProvider1.SetError(pName, "Не указано названте блюда!");
-                    pName.Text = null;
-                    k++;
-                }
-                if (String.IsNullOrEmpty(pComposition.Text) || pComposition.Text.Trim() == string.Empty)
-                {
-                    errorProvider1.SetError(pComposition, "Не указано описание блюда!");
-                    pComposition.Text = null;
-                    k++;
-                }
-                if (k == 0)
-                {
-                    errorProvider1.Clear();
-                    Menu_position position = new Menu_position(name, composition, mass, calories, prise);
-                    menuBox.Items.Add(position);
-                    pName.Text = null;
-                    pComposition.Text = null;
-                    pMass.Text = null;
-                    pCalories.Text = null;
-                    pPrise.Text = null;
-                }
+                errorProvider1.SetError(pName, "Не указано названте блюда!");
+                k++;
             }
-            catch
+            if (String.IsNullOrEmpty(pComposition.Text) || pComposition.Text.Trim() == string.Empty)
             {
-                errorProvider1.SetError(pMass, "Не коректный ввод данных!");
+                errorProvider1.SetError(pComposition, "Не указано описание блюда!");
+                k++;
+            }
+            if (!int.TryParse(pMass.Text, out int numMass))
+            {
+                errorProvider1.SetError(pMass, "Не коректное значение!");
+                k++;
+            }
+            if (!int.TryParse(pCalories.Text, out int numCalories))
+            {
+                errorProvider1.SetError(pCalories, "Не коректное значение!");
+                k++;
+            }
+            if (!int.TryParse(pPrise.Text, out int numPrise))
+            {
+                errorProvider1.SetError(pPrise, "Не коректное значение!");
+                k++;
+            }
+            if (k == 0)
+            {
+                errorProvider1.Clear();
+                Menu_position position = new Menu_position(name, composition, mass, calories, prise);
+                MenuOrder.AddPosition(position);
+                menuBox.Items.Add(position);
+                pName.Text = null;
+                pComposition.Text = null;
+                pMass.Text = null;
+                pCalories.Text = null;
+                pPrise.Text = null;
             }
         }
 

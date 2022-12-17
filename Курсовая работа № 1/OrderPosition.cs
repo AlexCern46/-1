@@ -8,14 +8,14 @@ namespace Курсовая_работа___1
 {
     internal class OrderPosition : Position
     {
-        int number;
+        string number;
 
-        public OrderPosition(string name, int number, double prise) : base(name, prise)
+        public OrderPosition(string name, string number, string prise) : base(name, prise)
         {
             this.number = number;
         }
 
-        public int Number
+        public string Number
         { 
             get { return number; } 
         }
