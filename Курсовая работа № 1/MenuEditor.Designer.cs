@@ -261,7 +261,7 @@
             this.tabPage4.Controls.Add(this.menuBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(799, 434);
+            this.tabPage4.Size = new System.Drawing.Size(776, 434);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Новый заказ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -472,6 +472,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MenuEditor";
             this.Text = "MenuEditor";
+            this.Load += new System.EventHandler(this.MenuEditor_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();

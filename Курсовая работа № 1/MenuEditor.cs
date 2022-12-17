@@ -12,9 +12,11 @@ namespace Курсовая_работа___1
 {
     public partial class MenuEditor : Form
     {
+        string columns = "{0, -13}{1, -12}{2, 0}{0, -13}{1, -12}{2, 0}";
         public MenuEditor()
         {
             InitializeComponent();
+
             menuBox.DisplayMember = "Name";
             orderBox.DisplayMember = "Name";
         }
@@ -56,8 +58,7 @@ namespace Курсовая_работа___1
             {
                 errorProvider1.Clear();
                 Menu_position position = new Menu_position(name, composition, mass, calories, prise);
-                MenuOrder.AddPosition(position);
-                menuBox.Items.Add(position);
+                menuBox.Items.Add(string.Format(columns, name, mass, prise, composition, calories));
                 pName.Text = null;
                 pComposition.Text = null;
                 pMass.Text = null;
@@ -68,7 +69,20 @@ namespace Курсовая_работа___1
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            orderBox.Items.Add(menuBox.SelectedItem);
+            if (menuBox.SelectedIndex != -1)
+            {
+                orderBox.Items.Add(menuBox.SelectedItem);
+                textBox1.Text = null;
+                textBox2.Text = null;
+                textBox3.Text = null;
+                textBox4.Text = null;
+                textBox5.Text = null;
+
+            }
+            else
+            {
+                MessageBox.Show("Ничего не выбрано");
+            }
         }
 
         private void deleteFromOrderButton_Click(object sender, EventArgs e)
@@ -81,9 +95,9 @@ namespace Курсовая_работа___1
             Menu_position position = (Menu_position)menuBox.SelectedItem;
             textBox1.Text = position.Name;
             textBox2.Text = position.Composition;
-            textBox3.Text = position.Mass.ToString();
-            textBox4.Text = position.Calories.ToString();
-            textBox5.Text = position.Prise.ToString();
+            textBox3.Text = position.Mass;
+            textBox4.Text = position.Calories;
+            textBox5.Text = position.Prise;
         }
 
         private void MakingAnOrderButton_Click(object sender, EventArgs e)
@@ -97,6 +111,11 @@ namespace Курсовая_работа___1
             {
                 MessageBox.Show("Заказ пуст");
             }
+        }
+
+        private void MenuEditor_Load(object sender, EventArgs e)
+        {
+            menuBox.Items.Add(string.Format(columns, "Назв.", "Вес(г)", "Цена"));
         }
     }
 }

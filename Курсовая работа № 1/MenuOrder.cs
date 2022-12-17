@@ -8,11 +8,15 @@ namespace Курсовая_работа___1
 {
     internal class MenuOrder
     {
-        private static List<Menu_position> menu = new List<Menu_position>();
+        private List<Menu_position> menu = new List<Menu_position>();
         
-        public static void AddPosition(Menu_position position)
+        public void AddPosition(Menu_position position)
         {
             menu.Add(position);
+        }
+        public List<Menu_position> Menu
+        {
+            get { return menu; }
         }
     }
 }
