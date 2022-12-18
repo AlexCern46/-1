@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +22,26 @@ namespace Курсовая_работа___1
             orders.Add(position);
         }
 
-        /*public static void SaveMenu()
+        public static void SaveMenu()
         {
-            using (System.IO.StreamWriter sw = new System.IO.StreamWriter(@"..\..\menuBox.txt", false))
+            StreamWriter sw = new StreamWriter(@"..\..\menuBox.txt", false);
+            for (int i = 0; i < menu.Count; i++)
             {
-                for (int i = 0; i < menu.Count; i++)
-                    sw.WriteLine($"{menu[i].ViewMenu}|{menu[i].Name}|{menu[i].Composition}|{menu[i].Mass}|{menu[i].Calories}|{menu[i].Prise}");
+                sw.WriteLine($"{menu[i].ViewMenu}|{menu[i].Name}|{menu[i].Composition}|{menu[i].Mass}|{menu[i].Calories}|{menu[i].Prise}");
             }
-        }*/
+            sw.Close();
+        }
+
+        public static void SaveOrders()
+        {
+            StreamWriter sw = new StreamWriter(@"..\..\ordersBox.txt", true);
+            sw.WriteLine();
+            for (int i = 0; i < orders.Count; i++)
+            {
+                sw.WriteLine($"{orders[i].Name}|{orders[i].Number}|{orders[i].Prise}");
+            }
+            sw.Close();
+            orders.Clear();
+        }
     }
 }

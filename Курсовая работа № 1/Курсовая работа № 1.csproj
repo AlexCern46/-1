@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="menuBox.txt" />
+    <Content Include="ordersBox.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

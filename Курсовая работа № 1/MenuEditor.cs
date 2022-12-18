@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Курсовая_работа___1
 {
@@ -55,7 +57,7 @@ namespace Курсовая_работа___1
             }
             if (k == 0)
             {
-                string viewMenu = name + "    " + mass + "    " + prise;
+                string viewMenu = name + "  " + mass + "  " + prise;
                 MenuPosition position = new MenuPosition(viewMenu, name, composition, mass, calories, prise);
                 MenuOrder.AddMenuPosition(position);
                 menuBox.Items.Add(position);
@@ -75,7 +77,7 @@ namespace Курсовая_работа___1
                 string name = position.Name;
                 string number = numberTextBox.Text;
                 string prise = Convert.ToString(Convert.ToDouble(position.Prise) * Convert.ToDouble(number));
-                string viewOrder = name + "    " + number + "    " + prise;
+                string viewOrder = name + "  " + number + "  " + prise;
                 OrderPosition order = new OrderPosition(viewOrder, name, number, prise);
                 orderBox.Items.Add(order);
                 MenuOrder.AddOrderPosition(order);
@@ -118,8 +120,9 @@ namespace Курсовая_работа___1
         {
             if (orderBox.Items.Count != 0) 
             {
-                OrderForm orderForm = new OrderForm(this);
-                orderForm.Show();
+                MenuOrder.SaveOrders();
+                orderBox.Items.Clear();
+                orderBox.Items.Add(string.Format(columns, "Назв.", "Кол-во", "Цена"));
             }
             else
             {
@@ -132,19 +135,27 @@ namespace Курсовая_работа___1
             menuBox.Items.Add(string.Format(columns, "Назв.", "Вес(г)", "Цена"));
             orderBox.Items.Add(string.Format(columns, "Назв.", "Кол-во", "Цена"));
             allOrdersBox.Items.Add(string.Format(columnsFinal, "Номер", "Цена"));
-            menuBox.Items.Clear();
-            /*using (System.IO.StreamReader sr = new System.IO.StreamReader(@"..\..\menuBox.txt"))
+            StreamReader reader = new StreamReader(@"..\..\menuBox.txt");
+            while (!reader.EndOfStream)
             {
-                while (!sr.EndOfStream)
-                {
-                    menuBox.Items.Add(sr.ReadLine());
-                }
-            }*/
+                string line = reader.ReadLine();
+                string[] fragments = line.Split('|');
+                string viewMenu = fragments[0];
+                string name = fragments[1];
+                string composition = fragments[2];
+                string mass = fragments[3];
+                string calories = fragments[4];
+                string prise = fragments[5];
+                MenuPosition position = new MenuPosition(viewMenu, name, composition, mass, calories, prise);
+                MenuOrder.AddMenuPosition(position);
+                menuBox.Items.Add(position);
+            }
+            reader.Close();
         }
 
         private void close_Click(object sender, EventArgs e)
         {
-            //MenuOrder.SaveMenu();
+            MenuOrder.SaveMenu();
             this.Close();
         }
 

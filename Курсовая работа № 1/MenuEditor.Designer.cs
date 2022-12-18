@@ -64,23 +64,23 @@
             this.orderBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.menuBox = new System.Windows.Forms.ListBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.orders = new System.Windows.Forms.TabPage();
-            this.allOrdersBox = new System.Windows.Forms.ListBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.allOrdersBox = new System.Windows.Forms.ListBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.close = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.newPosition.SuspendLayout();
             this.panel1.SuspendLayout();
             this.newOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.orders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -474,11 +474,6 @@
             this.menuBox.TabIndex = 0;
             this.menuBox.SelectedIndexChanged += new System.EventHandler(this.menuBox_SelectedIndexChanged);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
-            // 
             // orders
             // 
             this.orders.Controls.Add(this.textBox8);
@@ -496,45 +491,30 @@
             this.orders.Text = "Список заказов";
             this.orders.UseVisualStyleBackColor = true;
             // 
-            // allOrdersBox
+            // textBox8
             // 
-            this.allOrdersBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.allOrdersBox.FormattingEnabled = true;
-            this.allOrdersBox.ItemHeight = 20;
-            this.allOrdersBox.Location = new System.Drawing.Point(26, 33);
-            this.allOrdersBox.Name = "allOrdersBox";
-            this.allOrdersBox.Size = new System.Drawing.Size(185, 364);
-            this.allOrdersBox.TabIndex = 0;
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(433, 355);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(233, 33);
+            this.textBox8.TabIndex = 7;
             // 
-            // label15
+            // textBox7
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(75, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(88, 26);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Заказы";
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(435, 80);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(231, 255);
+            this.textBox7.TabIndex = 6;
             // 
-            // label16
+            // textBox6
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(248, 33);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(179, 29);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Номер заказа:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(248, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(181, 29);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Состав заказа:";
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(435, 33);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(231, 33);
+            this.textBox6.TabIndex = 5;
             // 
             // label18
             // 
@@ -546,30 +526,50 @@
             this.label18.TabIndex = 4;
             this.label18.Text = "Сумма заказа:";
             // 
-            // textBox6
+            // label17
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(435, 33);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(154, 33);
-            this.textBox6.TabIndex = 5;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(248, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(181, 29);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Состав заказа:";
             // 
-            // textBox7
+            // label16
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(435, 89);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(154, 246);
-            this.textBox7.TabIndex = 6;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(248, 33);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(179, 29);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Номер заказа:";
             // 
-            // textBox8
+            // label15
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(433, 355);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 33);
-            this.textBox8.TabIndex = 7;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(75, 4);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 26);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Заказы";
+            // 
+            // allOrdersBox
+            // 
+            this.allOrdersBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.allOrdersBox.FormattingEnabled = true;
+            this.allOrdersBox.ItemHeight = 20;
+            this.allOrdersBox.Location = new System.Drawing.Point(26, 33);
+            this.allOrdersBox.Name = "allOrdersBox";
+            this.allOrdersBox.Size = new System.Drawing.Size(185, 364);
+            this.allOrdersBox.TabIndex = 0;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
             // 
             // close
             // 
@@ -604,9 +604,9 @@
             this.panel1.ResumeLayout(false);
             this.newOrder.ResumeLayout(false);
             this.newOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.orders.ResumeLayout(false);
             this.orders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
