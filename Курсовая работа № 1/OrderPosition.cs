@@ -8,13 +8,19 @@ namespace Курсовая_работа___1
 {
     internal class OrderPosition : Position
     {
-        string number;
+        private string viewOrder;
+        private string number;
 
-        public OrderPosition(string name, string number, string prise) : base(name, prise)
+        public OrderPosition(string viewOrder, string name, string number, string prise) : base(name, prise)
         {
+            this.viewOrder = viewOrder;
             this.number = number;
         }
 
+        public string ViewOrder
+        {
+            get { return viewOrder; }
+        }
         public string Number
         { 
             get { return number; } 

@@ -44,7 +44,7 @@
             this.pName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.numberTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.MakingAnOrderButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuBox = new System.Windows.Forms.ListBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -239,7 +240,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.numberTextBox);
             this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.MakingAnOrderButton);
             this.tabPage4.Controls.Add(this.label13);
@@ -266,13 +267,13 @@
             this.tabPage4.Text = "Новый заказ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // numberTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(354, 331);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(85, 30);
-            this.textBox6.TabIndex = 19;
+            this.numberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberTextBox.Location = new System.Drawing.Point(354, 331);
+            this.numberTextBox.Name = "numberTextBox";
+            this.numberTextBox.Size = new System.Drawing.Size(85, 30);
+            this.numberTextBox.TabIndex = 19;
             // 
             // label14
             // 
@@ -429,6 +430,7 @@
             // 
             // orderBox
             // 
+            this.orderBox.DisplayMember = "ViewOrder";
             this.orderBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.orderBox.FormattingEnabled = true;
             this.orderBox.ItemHeight = 18;
@@ -450,6 +452,7 @@
             // menuBox
             // 
             this.menuBox.BackColor = System.Drawing.SystemColors.Info;
+            this.menuBox.DisplayMember = "ViewMenu";
             this.menuBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuBox.FormattingEnabled = true;
             this.menuBox.ItemHeight = 18;
@@ -461,6 +464,7 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // MenuEditor
@@ -519,8 +523,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button MakingAnOrderButton;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox numberTextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

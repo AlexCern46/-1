@@ -47,14 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuOrder.cs" />
     <Compile Include="MenuEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuEditor.Designer.cs">
       <DependentUpon>MenuEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_position.cs" />
+    <Compile Include="MenuPosition.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
