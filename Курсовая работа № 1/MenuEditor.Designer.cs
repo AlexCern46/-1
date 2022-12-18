@@ -303,7 +303,7 @@
             this.MakingAnOrderButton.Name = "MakingAnOrderButton";
             this.MakingAnOrderButton.Size = new System.Drawing.Size(107, 53);
             this.MakingAnOrderButton.TabIndex = 17;
-            this.MakingAnOrderButton.Text = "Перейти к оформлению заказа";
+            this.MakingAnOrderButton.Text = "Оформить заказа";
             this.MakingAnOrderButton.UseVisualStyleBackColor = true;
             this.MakingAnOrderButton.Click += new System.EventHandler(this.MakingAnOrderButton_Click);
             // 
@@ -377,9 +377,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(186, 163);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 25);
+            this.label9.Size = new System.Drawing.Size(96, 25);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Масса:";
+            this.label9.Text = "Масса(г):";
             // 
             // textBox2
             // 

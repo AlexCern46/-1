@@ -132,7 +132,7 @@ namespace Курсовая_работа___1
 
         private void MenuEditor_Load(object sender, EventArgs e)
         {
-            menuBox.Items.Add(string.Format(columns, "Назв.", "Вес(г)", "Цена"));
+            menuBox.Items.Add(string.Format(columns, "Назв.", "Масса(г)", "Цена"));
             orderBox.Items.Add(string.Format(columns, "Назв.", "Кол-во", "Цена"));
             allOrdersBox.Items.Add(string.Format(columnsFinal, "Номер", "Цена"));
             StreamReader reader = new StreamReader(@"..\..\menuBox.txt");
