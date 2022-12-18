@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.newPosition = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pAddButton = new System.Windows.Forms.Button();
             this.pPrise = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.newOrder = new System.Windows.Forms.TabPage();
             this.numberTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.MakingAnOrderButton = new System.Windows.Forms.Button();
@@ -65,45 +65,56 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuBox = new System.Windows.Forms.ListBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.orders = new System.Windows.Forms.TabPage();
+            this.allOrdersBox = new System.Windows.Forms.ListBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.close = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.newPosition.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.newOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.orders.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Controls.Add(this.newPosition);
+            this.tabControl1.Controls.Add(this.newOrder);
+            this.tabControl1.Controls.Add(this.orders);
+            this.tabControl1.Location = new System.Drawing.Point(0, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(784, 460);
+            this.tabControl1.Size = new System.Drawing.Size(784, 454);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage3
+            // newPosition
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(97)))), ((int)(((byte)(164)))));
-            this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Controls.Add(this.pPrise);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.pCalories);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.pMass);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.pComposition);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.pName);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(776, 434);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Новое блюдо";
+            this.newPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(97)))), ((int)(((byte)(164)))));
+            this.newPosition.Controls.Add(this.panel1);
+            this.newPosition.Controls.Add(this.pPrise);
+            this.newPosition.Controls.Add(this.label5);
+            this.newPosition.Controls.Add(this.pCalories);
+            this.newPosition.Controls.Add(this.label4);
+            this.newPosition.Controls.Add(this.pMass);
+            this.newPosition.Controls.Add(this.label3);
+            this.newPosition.Controls.Add(this.pComposition);
+            this.newPosition.Controls.Add(this.label2);
+            this.newPosition.Controls.Add(this.pName);
+            this.newPosition.Controls.Add(this.label1);
+            this.newPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newPosition.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.newPosition.Location = new System.Drawing.Point(4, 22);
+            this.newPosition.Name = "newPosition";
+            this.newPosition.Size = new System.Drawing.Size(776, 428);
+            this.newPosition.TabIndex = 0;
+            this.newPosition.Text = "Новое блюдо";
             // 
             // panel1
             // 
@@ -123,7 +134,7 @@
             this.pAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pAddButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(97)))), ((int)(((byte)(164)))));
-            this.pAddButton.Location = new System.Drawing.Point(591, 15);
+            this.pAddButton.Location = new System.Drawing.Point(582, 8);
             this.pAddButton.Name = "pAddButton";
             this.pAddButton.Size = new System.Drawing.Size(157, 51);
             this.pAddButton.TabIndex = 0;
@@ -238,34 +249,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Название блюда:";
             // 
-            // tabPage4
+            // newOrder
             // 
-            this.tabPage4.Controls.Add(this.numberTextBox);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.MakingAnOrderButton);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.deleteFromOrderButton);
-            this.tabPage4.Controls.Add(this.addToOrderButton);
-            this.tabPage4.Controls.Add(this.orderBox);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.menuBox);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(776, 434);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Новый заказ";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.newOrder.Controls.Add(this.numberTextBox);
+            this.newOrder.Controls.Add(this.label14);
+            this.newOrder.Controls.Add(this.MakingAnOrderButton);
+            this.newOrder.Controls.Add(this.label13);
+            this.newOrder.Controls.Add(this.label12);
+            this.newOrder.Controls.Add(this.textBox5);
+            this.newOrder.Controls.Add(this.label11);
+            this.newOrder.Controls.Add(this.textBox4);
+            this.newOrder.Controls.Add(this.label10);
+            this.newOrder.Controls.Add(this.textBox3);
+            this.newOrder.Controls.Add(this.label9);
+            this.newOrder.Controls.Add(this.textBox2);
+            this.newOrder.Controls.Add(this.label8);
+            this.newOrder.Controls.Add(this.textBox1);
+            this.newOrder.Controls.Add(this.label7);
+            this.newOrder.Controls.Add(this.deleteFromOrderButton);
+            this.newOrder.Controls.Add(this.addToOrderButton);
+            this.newOrder.Controls.Add(this.orderBox);
+            this.newOrder.Controls.Add(this.label6);
+            this.newOrder.Controls.Add(this.menuBox);
+            this.newOrder.Location = new System.Drawing.Point(4, 22);
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(776, 428);
+            this.newOrder.TabIndex = 1;
+            this.newOrder.Text = "Новый заказ";
+            this.newOrder.UseVisualStyleBackColor = true;
             // 
             // numberTextBox
             // 
@@ -287,7 +298,7 @@
             // 
             // MakingAnOrderButton
             // 
-            this.MakingAnOrderButton.Location = new System.Drawing.Point(666, 378);
+            this.MakingAnOrderButton.Location = new System.Drawing.Point(666, 373);
             this.MakingAnOrderButton.Name = "MakingAnOrderButton";
             this.MakingAnOrderButton.Size = new System.Drawing.Size(107, 53);
             this.MakingAnOrderButton.TabIndex = 17;
@@ -408,7 +419,8 @@
             // 
             // deleteFromOrderButton
             // 
-            this.deleteFromOrderButton.Location = new System.Drawing.Point(563, 378);
+            this.deleteFromOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteFromOrderButton.Location = new System.Drawing.Point(563, 373);
             this.deleteFromOrderButton.Name = "deleteFromOrderButton";
             this.deleteFromOrderButton.Size = new System.Drawing.Size(97, 53);
             this.deleteFromOrderButton.TabIndex = 4;
@@ -420,7 +432,7 @@
             // 
             this.addToOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addToOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addToOrderButton.Location = new System.Drawing.Point(298, 378);
+            this.addToOrderButton.Location = new System.Drawing.Point(298, 374);
             this.addToOrderButton.Name = "addToOrderButton";
             this.addToOrderButton.Size = new System.Drawing.Size(164, 49);
             this.addToOrderButton.TabIndex = 3;
@@ -443,7 +455,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(56, 0);
+            this.label6.Location = new System.Drawing.Point(57, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 25);
             this.label6.TabIndex = 1;
@@ -456,7 +468,7 @@
             this.menuBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuBox.FormattingEnabled = true;
             this.menuBox.ItemHeight = 18;
-            this.menuBox.Location = new System.Drawing.Point(0, 26);
+            this.menuBox.Location = new System.Drawing.Point(3, 26);
             this.menuBox.Name = "menuBox";
             this.menuBox.Size = new System.Drawing.Size(180, 400);
             this.menuBox.TabIndex = 0;
@@ -467,32 +479,144 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // orders
+            // 
+            this.orders.Controls.Add(this.textBox8);
+            this.orders.Controls.Add(this.textBox7);
+            this.orders.Controls.Add(this.textBox6);
+            this.orders.Controls.Add(this.label18);
+            this.orders.Controls.Add(this.label17);
+            this.orders.Controls.Add(this.label16);
+            this.orders.Controls.Add(this.label15);
+            this.orders.Controls.Add(this.allOrdersBox);
+            this.orders.Location = new System.Drawing.Point(4, 22);
+            this.orders.Name = "orders";
+            this.orders.Size = new System.Drawing.Size(776, 428);
+            this.orders.TabIndex = 2;
+            this.orders.Text = "Список заказов";
+            this.orders.UseVisualStyleBackColor = true;
+            // 
+            // allOrdersBox
+            // 
+            this.allOrdersBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.allOrdersBox.FormattingEnabled = true;
+            this.allOrdersBox.ItemHeight = 20;
+            this.allOrdersBox.Location = new System.Drawing.Point(26, 33);
+            this.allOrdersBox.Name = "allOrdersBox";
+            this.allOrdersBox.Size = new System.Drawing.Size(185, 364);
+            this.allOrdersBox.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(75, 4);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 26);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Заказы";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(248, 33);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(179, 29);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Номер заказа:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(248, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(181, 29);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Состав заказа:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(246, 355);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(181, 29);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Сумма заказа:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(435, 33);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(154, 33);
+            this.textBox6.TabIndex = 5;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(435, 89);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(154, 246);
+            this.textBox7.TabIndex = 6;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(433, 355);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(156, 33);
+            this.textBox8.TabIndex = 7;
+            // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.close.Location = new System.Drawing.Point(750, 5);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(28, 26);
+            this.close.TabIndex = 1;
+            this.close.Text = "Х";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // MenuEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(784, 466);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuEditor";
             this.Text = "MenuEditor";
             this.Load += new System.EventHandler(this.MenuEditor_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuEditor_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MenuEditor_MouseMove);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.newPosition.ResumeLayout(false);
+            this.newPosition.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.newOrder.ResumeLayout(false);
+            this.newOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.orders.ResumeLayout(false);
+            this.orders.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage newOrder;
+        private System.Windows.Forms.TabPage newPosition;
         private System.Windows.Forms.TextBox pName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox pComposition;
@@ -526,6 +650,15 @@
         private System.Windows.Forms.TextBox numberTextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TabPage orders;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ListBox allOrdersBox;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label close;
     }
 }

@@ -26,7 +26,6 @@ namespace Курсовая_работа___1
         private void OrderForm_Load(object sender, EventArgs e)
         {
             finalOrder.Items.Add(string.Format(columns, "Назв.", "Кол-во", "Цена"));
-            finalOrder.Items.Add()
         }
     }
 }

@@ -53,6 +53,7 @@
     <Compile Include="MenuEditor.Designer.cs">
       <DependentUpon>MenuEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuOrder.cs" />
     <Compile Include="MenuPosition.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
@@ -91,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="menuBox.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,7 @@ namespace Курсовая_работа___1
     public partial class MenuEditor : Form
     {
         string columns = "{0, -13}{1, -12}{2, -10}";
+        string columnsFinal = "{0, -13}{1, -12}";
         public MenuEditor()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Курсовая_работа___1
             string mass = pMass.Text.Trim();
             string calories = pCalories.Text.Trim();
             string prise = pPrise.Text.Trim();
+            errorProvider1.Clear();
             if (string.IsNullOrEmpty(name))
             {
                 errorProvider1.SetError(pName, "Не указано названте блюда!");
@@ -53,9 +55,9 @@ namespace Курсовая_работа___1
             }
             if (k == 0)
             {
-                errorProvider1.Clear();
                 string viewMenu = name + "    " + mass + "    " + prise;
                 MenuPosition position = new MenuPosition(viewMenu, name, composition, mass, calories, prise);
+                MenuOrder.AddMenuPosition(position);
                 menuBox.Items.Add(position);
                 pName.Text = null;
                 pComposition.Text = null;
@@ -76,6 +78,7 @@ namespace Курсовая_работа___1
                 string viewOrder = name + "    " + number + "    " + prise;
                 OrderPosition order = new OrderPosition(viewOrder, name, number, prise);
                 orderBox.Items.Add(order);
+                MenuOrder.AddOrderPosition(order);
                 textBox1.Text = null;
                 textBox2.Text = null;
                 textBox3.Text = null;
@@ -91,7 +94,14 @@ namespace Курсовая_работа___1
 
         private void deleteFromOrderButton_Click(object sender, EventArgs e)
         {
-            if (orderBox.SelectedIndex != -1) orderBox.Items.RemoveAt(orderBox.SelectedIndex);
+            if (orderBox.SelectedIndex != -1)
+            {
+                orderBox.Items.RemoveAt(orderBox.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Ничего не выбрано");
+            }
         }
 
         private void menuBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +131,46 @@ namespace Курсовая_работа___1
         {
             menuBox.Items.Add(string.Format(columns, "Назв.", "Вес(г)", "Цена"));
             orderBox.Items.Add(string.Format(columns, "Назв.", "Кол-во", "Цена"));
+            allOrdersBox.Items.Add(string.Format(columnsFinal, "Номер", "Цена"));
+            menuBox.Items.Clear();
+            /*using (System.IO.StreamReader sr = new System.IO.StreamReader(@"..\..\menuBox.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    menuBox.Items.Add(sr.ReadLine());
+                }
+            }*/
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            //MenuOrder.SaveMenu();
+            this.Close();
+        }
+
+        private void close_MouseEnter(object sender, EventArgs e)
+        {
+            close.ForeColor= Color.Red;
+        }
+
+        private void close_MouseLeave(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.Black;
+        }
+
+        Point lastPoint;
+        private void MenuEditor_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void MenuEditor_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
