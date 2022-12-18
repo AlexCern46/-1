@@ -298,6 +298,7 @@
             // 
             // MakingAnOrderButton
             // 
+            this.MakingAnOrderButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MakingAnOrderButton.Location = new System.Drawing.Point(666, 373);
             this.MakingAnOrderButton.Name = "MakingAnOrderButton";
             this.MakingAnOrderButton.Size = new System.Drawing.Size(107, 53);
@@ -574,6 +575,7 @@
             // close
             // 
             this.close.AutoSize = true;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.close.Location = new System.Drawing.Point(750, 5);
             this.close.Name = "close";
